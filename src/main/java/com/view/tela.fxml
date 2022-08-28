@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.TelaController">
+   <children>
+      <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Conversores">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="267.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entre com o valor" />
+                              <TextField fx:id="fieldNumero" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Escolha o tipo de conversão" />
+                              <ChoiceBox fx:id="choiseConversao" prefWidth="150.0" />
+                              <Text fx:id="txtResultadoConversao" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Aluno">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 1" />
+                              <TextField fx:id="fieldN1" maxWidth="100.0" prefWidth="100.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 2" />
+                              <TextField fx:id="fieldN2" maxWidth="100.0" prefWidth="100.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 3" />
+                              <TextField fx:id="fieldN3" maxWidth="100.0" prefWidth="100.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 4" />
+                              <TextField fx:id="fieldN4" maxWidth="100.0" prefWidth="100.0" />
+                              <Button mnemonicParsing="false" onAction="#calcularMedia" text="Calcular" />
+                              <Text fx:id="ResultadoNotas" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Olá">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text fx:id="txtSaudacao" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <font>
+                                    <Font size="48.0" />
+                                 </font>
+                              </Text>
+                              <Button mnemonicParsing="false" onAction="#pedirSaudacao" text="Saudação" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Aluno2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 1" />
+                              <TextField fx:id="fieldP1" maxWidth="100.0" prefWidth="100.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 2" />
+                              <TextField fx:id="fieldP2" maxWidth="100.0" prefWidth="100.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 3" />
+                              <TextField fx:id="fieldP3" maxWidth="100.0" prefWidth="100.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nota 4" />
+                              <TextField fx:id="fieldP4" maxWidth="100.0" prefWidth="100.0" />
+                              <Button mnemonicParsing="false" onAction="#calcularMediaMetodo" text="Calcular" />
+                              <Text fx:id="ResultadoNotasMetodo" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Inteiro">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
