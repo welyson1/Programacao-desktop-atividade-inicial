@@ -1,7 +1,7 @@
 package com.model.ex3;
 
 public class Inteiro {
-    private int valor;
+    public int valor;
     
     public int getValor() {
         return valor;

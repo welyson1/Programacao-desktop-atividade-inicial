@@ -44,6 +44,22 @@ public class TelaController implements Initializable {
     @FXML
     private Text txtSaudacao;
 
+    //Inteiro
+    @FXML
+    private TextField fieldSomarValor;
+    @FXML
+    private TextField fieldSubtrairValor;
+    @FXML
+    private TextField fieldCarregarValor;
+    @FXML
+    private TextField fieldDividirValor;
+    @FXML
+    private TextField fieldMultiplicarValor;
+    @FXML
+    private Text valorAbs;
+    @FXML
+    private Text valorNormal;
+
     //Aluno2
     @FXML
     private TextField fieldP1;
@@ -150,6 +166,68 @@ public class TelaController implements Initializable {
         aluno2.recebeNota4(Float.parseFloat(fieldP4.getText()));
 
         ResultadoNotasMetodo.setText(aluno2.imprimeMédia());
+    }
+
+    @FXML
+    void carregarValor(ActionEvent event) {
+        inteiro.carregaValor(Integer.parseInt(fieldCarregarValor.getText()));
+        fieldCarregarValor.clear();
+    }
+
+    @FXML
+    void devolverValor(ActionEvent event) {
+        valorNormal.setText(String.valueOf(inteiro.getValor()));
+    }
+
+    @FXML
+    void devolverValorAbs(ActionEvent event) {
+        valorAbs.setText(String.valueOf(inteiro.devolveValorAbsoluto()));
+    }
+
+    @FXML
+    void dividirValor(ActionEvent event) {
+        String valorTexto = fieldDividirValor.getText();
+
+        int divisor = Integer.parseInt(valorTexto);
+
+        int divResultado = inteiroImplemento.dividePor(divisor);
+
+        inteiro.setValor(divResultado);
+    }
+
+    @FXML
+    void multiplicarValor(ActionEvent event) {
+        String valorTexto = fieldMultiplicarValor.getText();
+
+        int mult = Integer.parseInt(valorTexto);
+
+        int multResultado = inteiroImplemento.multiplicaPor(mult);
+
+        inteiro.setValor(multResultado);
+
+    }
+
+    @FXML
+    void somarValor(ActionEvent event) {
+        String valorTexto = fieldSomarValor.getText();
+
+        int soma = Integer.parseInt(valorTexto);
+
+        int somaResultado = inteiroImplemento.soma(soma);
+
+        inteiro.setValor(somaResultado);
+
+    }
+
+    @FXML
+    void subtrairValor(ActionEvent event) {
+        String valorTexto = fieldSomarValor.getText();
+
+        int sub = Integer.parseInt(valorTexto);
+
+        int subResultado = inteiroImplemento.subtrai(sub);
+
+        inteiro.setValor(subResultado);
     }
 
 }
