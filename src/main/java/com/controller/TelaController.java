@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 import com.model.ex0.Conversores;
 import com.model.ex1.Aluno;
 import com.model.ex2.Ola;
-import com.model.ex3.Inteiro;
 import com.model.ex4.InteiroImplemento;
 import com.model.ex6.Aluno2;
 
@@ -44,7 +43,7 @@ public class TelaController implements Initializable {
     @FXML
     private Text txtSaudacao;
 
-    //Inteiro
+    //inteiroImplemento
     @FXML
     private TextField fieldSomarValor;
     @FXML
@@ -76,7 +75,6 @@ public class TelaController implements Initializable {
     Conversores conversores = new Conversores();
     Aluno aluno = new Aluno();
     Ola ola = new Ola();
-    Inteiro inteiro = new Inteiro();
     InteiroImplemento inteiroImplemento = new InteiroImplemento();
     Aluno2 aluno2 = new Aluno2();    
 
@@ -170,18 +168,18 @@ public class TelaController implements Initializable {
 
     @FXML
     void carregarValor(ActionEvent event) {
-        inteiro.carregaValor(Integer.parseInt(fieldCarregarValor.getText()));
+        inteiroImplemento.carregaValor(Integer.parseInt(fieldCarregarValor.getText()));
         fieldCarregarValor.clear();
     }
 
     @FXML
     void devolverValor(ActionEvent event) {
-        valorNormal.setText(String.valueOf(inteiro.getValor()));
+        valorNormal.setText(String.valueOf(inteiroImplemento.getValor()));
     }
 
     @FXML
     void devolverValorAbs(ActionEvent event) {
-        valorAbs.setText(String.valueOf(inteiro.devolveValorAbsoluto()));
+        valorAbs.setText(String.valueOf(inteiroImplemento.devolveValorAbsoluto()));
     }
 
     @FXML
@@ -192,7 +190,7 @@ public class TelaController implements Initializable {
 
         int divResultado = inteiroImplemento.dividePor(divisor);
 
-        inteiro.setValor(divResultado);
+        inteiroImplemento.setValor(divResultado);
     }
 
     @FXML
@@ -203,7 +201,7 @@ public class TelaController implements Initializable {
 
         int multResultado = inteiroImplemento.multiplicaPor(mult);
 
-        inteiro.setValor(multResultado);
+        inteiroImplemento.setValor(multResultado);
 
     }
 
@@ -215,7 +213,7 @@ public class TelaController implements Initializable {
 
         int somaResultado = inteiroImplemento.soma(soma);
 
-        inteiro.setValor(somaResultado);
+        inteiroImplemento.setValor(somaResultado);
 
     }
 
@@ -227,7 +225,7 @@ public class TelaController implements Initializable {
 
         int subResultado = inteiroImplemento.subtrai(sub);
 
-        inteiro.setValor(subResultado);
+        inteiroImplemento.setValor(subResultado);
     }
 
 }

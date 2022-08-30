@@ -2,28 +2,43 @@ package com.model.ex4;
 
 import com.model.ex3.Inteiro;
 
-public class InteiroImplemento {
-    Inteiro inteiro = new Inteiro();
-        
+public class InteiroImplemento extends Inteiro {
+    
+    /**
+     * Faz a soma de no valor armazenado
+     * @param v valor para somar
+     * @return valor somado pelo parametro
+     */
     public int soma(int v){        
         /*Soma v ao valor deste objeto (valor + v). Este objeto passa a representar o novo
     valor, que também deve ser devolvido pelo método.*/
-        inteiro.setValor(inteiro.getValor() + v);
-        return inteiro.getValor();
+        this.setValor(this.getValor() + v);
+        return this.getValor();
     }
     
+    /**
+     * Faz a subtração do valor
+     * @param v
+     * @return valor subtraido pelo parametro
+     */
     public int subtrai(int v){        
         /*Subtrai v do valor deste objeto (valor - v). Este objeto passa a representar o novo
     valor, que também deve ser devolvido pelo método.*/
-        inteiro.setValor(inteiro.getValor() - v);
-        return inteiro.getValor();
+        int vv = this.getValor() - v;
+        this.setValor(vv);
+        return this.getValor();
     }
     
+    /**
+     * Faz a multiplicação do valor armazenado pelo valor passado
+     * @param v valor para multiplicar
+     * @return valor multiplicação pelo parametro
+     */
     public int multiplicaPor(int v){        
         /*Multiplica o valor deste objeto por v (valor * v). Este objeto passa a representar o
     novo valor, que também deve ser devolvido pelo método.*/
-        inteiro.setValor(inteiro.getValor() * v);
-        return inteiro.getValor();
+        this.setValor(this.getValor() * v);
+        return this.getValor();
     }
     
     /**
@@ -38,13 +53,13 @@ public class InteiroImplemento {
     que também deve ser devolvido pelo método.*/
         int resultado = 0;
         if (divisor != 0) {
-            resultado = (inteiro.getValor()/divisor);
+            resultado = ((int)this.getValor()/divisor);
             return resultado;
         }else{
             System.out.println("Impossivel dividir por zero");
-            System.out.println("Valor inalterado: " + inteiro.getValor());
+            System.out.println("Valor inalterado: " + this.getValor());
         }
-        return inteiro.getValor();              
+        return this.getValor();              
     }    
 
 }
